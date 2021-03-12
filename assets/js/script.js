@@ -10,9 +10,15 @@ var taskFormHandler = function(event) {
     var taskNameInput = document.querySelector("input[name='task-name']").value; 
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
     
-    if (!taskTypeInput){
-        taskTypeInput = "None";
+    //check if there is any input, if not run an alert and stop the function
+    if (!taskTypeInput || !taskTypeInput){
+        alert ("You need to fill out the task form");
+        return false;
     }
+    //resets the text form after pressing the button
+    //.reset ONLY works on form objects
+    formEl.reset();
+   
 
     var taskDataObj = {
         name: taskNameInput,
