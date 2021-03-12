@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,12 +11,12 @@
 
 <body>
 
-  <script src="./assets/js/script.js"></script>
+  
 
   <header>
     <h1 class = "page-title">Taskinator</h1>
     <p>Click the Button below to add a new Task</p>
-    <button class = "btn">Add Task</button>
+    <button id = "save-task" class = "btn">Add Task</button>
   </header>
 
   
@@ -23,12 +24,17 @@
   <main class = "page-content">
     <section class = "task-list-wrapper">
         <h2 class = "list-title">Tasks to Do</h2>
-        <ul class = "task-list">
+        <ul class = "task-list" id = "tasks-to-do">
             <li class = "task-item">A task is going to be added soon!</li>
         </ul>
     </section>
   </main> 
+
   <footer>&copy;2020 by Taskinator</footer>
+
+  <!--script needs to go at the end of the body because of read order-->
+  <script src="./assets/js/script.js"></script>
+  
 </body>
 
 </html>
